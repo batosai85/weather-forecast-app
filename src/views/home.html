@@ -1,0 +1,20 @@
+<div layout="column">
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4" layout-padding style="height:220px;">
+            <md-input-container>
+                <label>Title</label>
+                <input ng-model="formCity"> </md-input-container>
+            <md-button ng-click="toggleLeft();getWeather()" class="md-warn"> Get Weather </md-button>
+        </md-sidenav>
+    </section>
+</div>
+<div class="text-center">
+    <h1>Weather forecast application</h1>
+    <md-button ng-click="toggleLeft();weatherResult.list[0] = false" class="md-warn"> Choose City </md-button>
+    <h1 ng-if="weatherResult.list[0]" class="city">{{city}}</h1>
+</div>
+<br/><br/>
+<div ng-if="loading"  layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<div ui-view class="ui"></div>

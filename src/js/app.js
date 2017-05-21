@@ -1,0 +1,10 @@
+require("../css/main.less");
+import angular from "angular";
+import uiRouter from "angular-ui-router";
+import ngAnimate from "angular-animate";
+import ngAria from "angular-aria";
+import ngMessages from "angular-messages";
+import ngResource from "angular-resource";
+import ngMaterial from "angular-material";
+import App from "./angular.js";
+App();

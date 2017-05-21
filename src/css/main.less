@@ -1,0 +1,188 @@
+@import '~angular-material/angular-material.css';
+
+html {
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/img/city.jpg') center center fixed;
+    background-size: cover;
+}
+
+body {
+    background: transparent;
+    overflow-y: hidden !important;
+}
+
+.weather {
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    width: 80%;
+    margin: 0 auto;
+}
+
+.md-sidenav-left,
+.layout-margin,
+._md {
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)) !important;
+}
+
+.md-sidenav-left,
+.md-button {
+    font-weight: 800;
+}
+
+.ui,
+.text-center {
+    text-align: center;
+}
+
+.ui.ng-enter,
+.weather.ng-enter {
+    transition: 1s linear all;
+    transition-delay: 1.5s;
+    opacity: 0;
+}
+
+.ui.ng-enter-active,
+.weather.ng-enter-active {
+    opacity: 1;
+}
+
+.ui.ng-leave,
+.weather.ng-leave {
+    transition: 0.2s linear all;
+    opacity: 1;
+}
+
+.ui.ng-leave-active,
+.weather.ng-leave-active {
+    opacity: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.city {
+    animation: 1s city forwards;
+}
+
+.city.ng-leave {
+    transition: 0.5s linear all;
+    opacity: 1;
+}
+
+.city.ng-leave-active {
+    opacity: 0;
+}
+
+@-moz-keyframes city {
+    0% {
+        margin-top: -200px;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    70% {
+        margin-top: 15px
+    }
+    85% {
+        margin-top: 5px
+    }
+    100% {
+        margin-top: 10px
+    }
+}
+@-webkit-keyframes city {
+    0% {
+        margin-top: -200px;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    70% {
+        margin-top: 15px
+    }
+    85% {
+        margin-top: 5px
+    }
+    100% {
+        margin-top: 10px
+    }
+}
+@-ms-keyframes city {
+    0% {
+        margin-top: -200px;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    70% {
+        margin-top: 15px
+    }
+    85% {
+        margin-top: 5px
+    }
+    100% {
+        margin-top: 10px
+    }
+}
+
+.imgWeather {
+    width: 200px;
+    min-height: 200px;
+}
+
+.weather1 {
+    margin-top: 20px;
+}
+
+hr {
+    width: 80%;
+    border: none;
+    height: 2px;
+    color: #ffeb3b;
+    background-color: #ffeb3b;
+    transition: 0.5s linear all;
+}
+
+.weather:hover hr {
+    width: 95%;
+    color: #fff;
+    background-color: #fff;
+}
+
+.weather2 {
+    transition: 0.5s linear all;
+    min-height: 210px;
+}
+
+.weather2:hover {
+    background: #6a6110 !important;
+}
+
+@media only screen and (max-width:1279px) {
+    body {
+        overflow-y: scroll !important;
+    }
+}
+
+@media only screen and (max-width:959px) {
+    .cont {
+        min-height: 400px;
+    }
+    .weather1 {
+        margin-top: -10px;
+    }
+}
