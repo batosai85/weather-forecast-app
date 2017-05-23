@@ -1,4 +1,4 @@
-export default function(module){
+export default function Router(module){
     module.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         $stateProvider.state("home", {
             url: "/"
