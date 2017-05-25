@@ -46,20 +46,24 @@ module.exports = {
          },
             {
                 test: /\.(jpg|png|gif)$/,
-                //loaders: [{
-                loader: "file-loader",
+                loader: "url-loader",
                 options: {
-                            name: './img/[name].[ext]'
+                    name: './images/[name].[ext]'
                 },
-            //},
-             // "img-loader"
-          //  ],
                 exclude: /node_modules/
-         },
-            {
-                test: /\.(svg|eot|ttf|woff|woff2)$/,
-                loader: "file-loader"
-         }
+            },
+            { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+             loader: "url-loader?limit=10000&mimetype=application/font-woff",
+             options: {
+                 name: './fonts/[name].[ext]'
+             }
+            },
+            { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+             loader: "url-loader",
+             options: {
+                 name: './fonts/[name].[ext]'
+             }
+            }
      ]
     },
     plugins: [
